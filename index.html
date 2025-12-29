@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCI | Campus Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🌱 Campus Carbon Intelligence</h1>
+            <p>Real-time resource tracking & simulation</p>
+        </header>
+
+        <div class="main-container">
+            <div id="map"></div> <aside id="dashboard">
+                <h2 id="b-name">Select a Building</h2>
+                <div class="stats">
+                    <div class="card">
+                        <span>⚡ Electricity</span>
+                        <h3 id="elec-val">0 <small>kg CO₂</small></h3>
+                    </div>
+                    <div class="card">
+                        <span>💧 Water</span>
+                        <h3 id="water-val">0 <small>kg CO₂</small></h3>
+                    </div>
+                </div>
+                
+                <div class="total-impact">
+                    <p>Total Footprint: <span id="total-val">0</span> kg CO₂</p>
+                </div>
+
+                <div class="sim-box">
+                    <h4>"What-If" Simulation</h4>
+                    <label>LED Retrofit Coverage (%):</label>
+                    <input type="range" id="sim-slider" min="0" max="100" value="0">
+                    <p>Potential Monthly Savings: <b id="save-val">0</b> kg CO₂</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
